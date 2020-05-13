@@ -16,6 +16,12 @@ const ProductCard = (props) => {
         </h3>
         <div className="font-bold mb-3">$ {props.product.price}</div>
         <div className="mb-3">{props.product.description}</div>
+        <Link
+          to={`/products/${props.product.id}`}
+          className="bg-blue-500 text-white p-2 flex justify-center"
+        >
+          View
+        </Link>
       </div>
     </div>
   );
