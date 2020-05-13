@@ -9,7 +9,10 @@ const Product = (props) => {
     data: null,
     error: false,
   });
-  const { id } = useParams();
+  let { id } = useParams();
+  if (props.id) {
+    id = props.id;
+  }
   const url = "https://5ebb15e4f2cfeb001697c8e0.mockapi.io/products/" + id;
   let content;
 
